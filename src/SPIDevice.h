@@ -22,6 +22,7 @@ class SPIDevice
 
         uint8_t write(const uint8_t data[], const uint8_t len);
         void write16(const uint16_t);
+        uint32_t read32();
 };
 
 #endif //__SPIDEVICE_H
