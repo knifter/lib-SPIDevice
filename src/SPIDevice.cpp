@@ -5,11 +5,13 @@
 #include <Arduino.h>
 #include <SPI.h>
 
+// #include <tools-log.h>
+
 bool SPIDevice::begin()
 {
     pinMode(_cs, OUTPUT);
     digitalWrite(_cs, HIGH);
-    
+
     _spi.begin();
 
     _initialized = true;
@@ -110,10 +112,10 @@ uint32_t SPIDevice::readreg24(const uint8_t reg)
         uint8_t raw[4];
         uint32_t i;
     } r;
-    r.raw[0] = _spi.transfer(0x00);
-    r.raw[1] = _spi.transfer(0x00);
+    r.raw[3] = 0x00;
     r.raw[2] = _spi.transfer(0x00);
-    r.raw[3] = _spi.transfer(0x00);
+    r.raw[1] = _spi.transfer(0x00);
+    r.raw[0] = _spi.transfer(0x00);
 
     _spi.endTransaction();
     digitalWrite(_cs, HIGH);
