@@ -23,8 +23,8 @@ uint8_t SPIDevice::write(const uint8_t data[], const uint8_t len)
     digitalWrite(_cs, LOW);
     _spi.beginTransaction(_spisettings);
     // uint8_t cnt = 0;
-    // while(cnt++ != len)
-    //     _spi.transfer(data[cnt]);
+    // while(cnt != len)
+    //     _spi.transfer(data[cnt++]);
     _spi.transferBytes(data, NULL, len);
     digitalWrite(_cs, HIGH);
     _spi.endTransaction();
