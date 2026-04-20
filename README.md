@@ -43,3 +43,6 @@ lib_deps =
 Some example devices are between my github repositories, like:
  * [x] [LS7366 Quadrature Counter](https://github.com/knifter/lib-LS7366)
  * [x] [MAX31855 Thermocouple reader](https://github.com/knifter/lib-MAX31855)
+
+## Author
+This software is written by [Tijs van Roon](https://github.com/knifter). It is free to use under the [MIT License](LICENSE).

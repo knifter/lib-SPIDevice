@@ -1,0 +1,22 @@
+{
+  "name": "lib-SPIDevice",
+  "version": "1.0.0",
+  "description": "Base class for Arduino SPI device drivers. Wraps the Arduino SPI API with per-device frequency, bit order, and SPI mode configuration, plus CS-pin management. Companion to lib-TwoWireDevice.",
+  "keywords": ["spi", "sensor", "driver", "esp32", "arduino"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/knifter/lib-SPIDevice"
+  },
+  "authors": {
+    "name": "Tijs van Roon",
+    "url": "https://github.com/knifter",
+    "maintainer": true
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/knifter/lib-SPIDevice",
+  "frameworks": "arduino",
+  "platforms": "*",
+  "build": {
+    "srcDir": "src"
+  }
+}
